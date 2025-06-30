@@ -21,6 +21,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(morgan("dev"));
 
+app.get("/", (req, res) => {
+  res.send("<h1>Hello Siddharth, You are done it.</h1>");
+});
+
 app.use("/auth", authRouter);
 app.use("/jobPost", jobRouter);
 app.use("/user", userRouter);
