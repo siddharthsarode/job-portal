@@ -7,7 +7,13 @@ const JobPage = () => {
   useEffect(() => {
     const getJobs = async () => {
       try {
-        const res = await fetch(`${import.meta.env.VITE_APP_BASE_URL}/jobPost`);
+        const res = await fetch(
+          `${import.meta.env.VITE_APP_BASE_URL}/jobPost`,
+          {
+            method: "GET",
+            credentials: "include",
+          }
+        );
         const result = await res.json();
 
         if (!res.ok) throw new Error(result.message || "no data found");

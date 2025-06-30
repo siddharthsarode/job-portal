@@ -17,7 +17,10 @@ connectDB();
 
 app.use(
   cors({
-    origin: "https://job-portal-ome5.onrender.com",
+    origin: [
+      "https://job-portal-ome5.onrender.com",
+      "https://job-portal-frontend-virk.onrender.com",
+    ],
     credentials: true,
   })
 );
