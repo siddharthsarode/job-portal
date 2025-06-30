@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import useAuth from "../../hooks/useAuth";
-import Loader from "../../components/Loader";
 import { toast } from "react-toastify";
 
 const Profile = () => {
@@ -151,7 +150,7 @@ const Profile = () => {
                 className="bg-primary text-light py-2 px-6 rounded-md hover:bg-green transition font-medium"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? <Loader /> : "Save"}
+                {isSubmitting ? <div>Loading...</div> : "Save"}
               </button>
               <button
                 type="button"

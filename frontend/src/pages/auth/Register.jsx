@@ -1,7 +1,6 @@
 import { useForm } from "react-hook-form";
 import { FaUserTie, FaUserGraduate } from "react-icons/fa";
 import { toast } from "react-toastify";
-import Loader from "../../components/Loader";
 import { useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 
@@ -182,7 +181,7 @@ const Register = () => {
               type="submit"
               className="w-full bg-primary  text-light py-2 rounded-md hover:bg-green transition font-medium"
             >
-              {isSubmitting ? <Loader /> : "Register"}
+              {isSubmitting ? <div>Loading...</div> : "Register"}
             </button>
           </div>
         </form>

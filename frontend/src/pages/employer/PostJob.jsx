@@ -1,7 +1,6 @@
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import useAuth from "../../hooks/useAuth";
-import Loader from "../../components/Loader";
 
 const PostJob = () => {
   const {
@@ -173,7 +172,7 @@ const PostJob = () => {
           type="submit"
           className="w-full bg-primary text-white font-semibold py-2 rounded-md hover:bg-dark transition"
         >
-          {isSubmitting ? <Loader /> : "Post Job"}
+          {isSubmitting ? <div>Loader...</div> : "Post Job"}
         </button>
       </form>
     </div>

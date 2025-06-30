@@ -1,7 +1,5 @@
 import { useForm } from "react-hook-form";
-import { FaUserTie, FaUserGraduate } from "react-icons/fa";
 import { toast } from "react-toastify";
-import Loader from "../../components/Loader";
 import { useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 
@@ -96,7 +94,7 @@ const Login = () => {
               type="submit"
               className="w-full bg-primary  text-light py-2 rounded-md hover:bg-green transition font-medium"
             >
-              {isSubmitting ? <Loader /> : "Login"}
+              {isSubmitting ? <div>Loading...</div> : "Login"}
             </button>
           </div>
         </form>

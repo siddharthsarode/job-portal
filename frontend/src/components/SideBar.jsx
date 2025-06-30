@@ -1,6 +1,5 @@
 import { FiLogOut } from "react-icons/fi";
 import SidebarLink from "./SidebarLink";
-import { useNavigate } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 
 const SideBar = ({ actionLinks, isOpen, toggleSidebar }) => {

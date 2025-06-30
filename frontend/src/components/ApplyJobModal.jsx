@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import useAuth from "../hooks/useAuth";
 import { Navigate } from "react-router-dom";
-import Loader from "./Loader";
 
 const ApplyJobModal = ({ isOpen, onClose, onSubmit, loading }) => {
   const [formData, setFormData] = useState({
@@ -72,7 +71,7 @@ const ApplyJobModal = ({ isOpen, onClose, onSubmit, loading }) => {
               type="submit"
               className="px-4 py-2 bg-primary text-white rounded hover:bg-secondary"
             >
-              {loading ? <Loader /> : "Apply"}
+              {loading ? <div>Loading...</div> : "Apply"}
             </button>
           </div>
         </form>
